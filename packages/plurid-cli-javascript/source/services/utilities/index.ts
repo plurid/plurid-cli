@@ -1,16 +1,20 @@
-import {
-    exec,
-    execSync,
-} from 'child_process';
+// #region imports
+    // #region libraries
+    import {
+        exec,
+        execSync,
+    } from 'child_process';
+    // #endregion libraries
+// #endregion imports
 
 
 
+// #region module
 export const programHasCommand = (
     argv: string[],
 ) => {
     return !!argv.slice(2).length;
 }
-
 
 
 /**
@@ -73,3 +77,4 @@ export const checkPackageInstalledGlobally = async (
         return false;
     }
 }
+// #endregion module

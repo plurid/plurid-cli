@@ -1,7 +1,12 @@
-import store from '../services/store';
+// #region imports
+    // #region external
+    import store from '../services/store';
+    // #endregion external
+// #endregion imports
 
 
 
+// #region module
 const logoutCommand = async () => {
     const user = store.get('user');
 
@@ -17,6 +22,10 @@ const logoutCommand = async () => {
 
     console.log(`\n\tLogged out from user ${user.username}.\n`);
 }
+// #endregion module
 
 
+
+// #region exports
 export default logoutCommand;
+// #endregion exports

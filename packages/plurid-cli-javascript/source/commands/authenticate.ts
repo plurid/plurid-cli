@@ -1,20 +1,28 @@
-import path from 'path';
+// #region imports
+    // #region libraries
+    import path from 'path';
 
-import express from 'express';
+    import express from 'express';
 
-import open from 'open';
+    import open from 'open';
 
-import getPort from 'get-port';
-
-import store from '../services/store';
-
-import client from '../services/graphql/client';
-import {
-    GET_ACCESS_CODE_TOKENS,
-} from '../services/graphql/query';
+    import getPort from 'get-port';
+    // #endregion libraries
 
 
+    // #region external
+    import store from '../services/store';
 
+    import client from '../services/graphql/client';
+    import {
+        GET_ACCESS_CODE_TOKENS,
+    } from '../services/graphql/query';
+    // #endregion external
+// #endregion imports
+
+
+
+// #region module
 const app = express();
 app.use(express.static('server'));
 app.get('/access/:accessCode', (req, res) => {
@@ -104,6 +112,10 @@ const authenticateCommand = async () => {
         }
     }, 1500);
 }
+// #endregion module
 
 
+
+// #region exports
 export default authenticateCommand;
+// #endregion exports

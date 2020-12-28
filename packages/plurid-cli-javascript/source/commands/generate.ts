@@ -1,11 +1,16 @@
-import {
-    checkPackageInstalledGlobally,
-    executeCommand,
-    executeCommandSameTerminal,
-} from '../services/utilities';
+// #region imports
+    // #region external
+    import {
+        checkPackageInstalledGlobally,
+        executeCommand,
+        executeCommandSameTerminal,
+    } from '../services/utilities';
+    // #endregion external
+// #endregion imports
 
 
 
+// #region module
 const generateCommand = async (
     options: any,
 ) => {
@@ -35,6 +40,10 @@ const generateCommand = async (
         console.log('\n\n\tClosed plurid\' application generator program.\n');
     }
 }
+// #endregion module
 
 
+
+// #region exports
 export default generateCommand;
+// #endregion exports

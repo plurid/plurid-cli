@@ -1,7 +1,12 @@
-import store from '../services/store';
+// #region imports
+    // #region external
+    import store from '../services/store';
+    // #endregion external
+// #endregion imports
 
 
 
+// #region module
 const statusCommand = async () => {
     const user = store.get('user');
 
@@ -13,6 +18,10 @@ const statusCommand = async () => {
 
     console.log(`\n\tLogged in as ${user.username}.\n`);
 }
+// #endregion module
 
 
+
+// #region exports
 export default statusCommand;
+// #endregion exports

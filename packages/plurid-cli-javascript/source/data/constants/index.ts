@@ -1,7 +1,12 @@
-import environment from '../../services/utilities/environment';
+// #region imports
+    // #region external
+    import environment from '../../services/utilities/environment';
+    // #endregion external
+// #endregion imports
 
 
 
+// #region module
 export const PLURID_API_URL_GRPAHQL = environment.production
     ? 'https://api.plurid.com/graphql/'
     : environment.development
@@ -16,3 +21,4 @@ export const UPLOAD_HOSTNAME = environment.local
 export const UPLOAD_PORT = environment.local
     ? 33601
     : 443;
+// #endregion module

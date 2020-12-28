@@ -1,35 +1,43 @@
-import fs from 'fs';
-import path from 'path';
-import http from 'http';
-import https from 'https';
+// #region imports
+    // #region libraries
+    import fs from 'fs';
+    import path from 'path';
+    import http from 'http';
+    import https from 'https';
 
-import FormData from 'form-data';
-import yaml from 'js-yaml';
-import Zip from 'adm-zip';
-import gitIgnore from 'parse-gitignore';
-
-import {
-    UPLOAD_HOSTNAME,
-    UPLOAD_PORT,
-} from '../data/constants';
-
-import store from '../services/store';
-
-import environment from '../services/utilities/environment';
-
-import {
-    userLoggedIn,
-} from '../services/utilities/user';
-
-import {
-    authenticationClient,
-} from '../services/graphql/client';
-import {
-    APP_CHECK_AVAILABLE_APP_NAME,
-} from '../services/graphql/query';
+    import FormData from 'form-data';
+    import yaml from 'js-yaml';
+    import Zip from 'adm-zip';
+    import gitIgnore from 'parse-gitignore';
+    // #endregion libraries
 
 
+    // #region external
+    import {
+        UPLOAD_HOSTNAME,
+        UPLOAD_PORT,
+    } from '../data/constants';
 
+    import store from '../services/store';
+
+    import environment from '../services/utilities/environment';
+
+    import {
+        userLoggedIn,
+    } from '../services/utilities/user';
+
+    import {
+        authenticationClient,
+    } from '../services/graphql/client';
+    import {
+        APP_CHECK_AVAILABLE_APP_NAME,
+    } from '../services/graphql/query';
+    // #endregion external
+// #endregion imports
+
+
+
+// #region module
 const authenticateClient = () => {
     const token = store.get('token');
     const refreshToken = store.get('refreshToken');
@@ -236,6 +244,10 @@ const deployCommand = async (
     console.log(`\n\t\thttps://${checkedAppName}.plurid.app\n`);
     console.log(`\tand enjoy.\n`);
 }
+// #endregion module
 
 
+
+// #region exports
 export default deployCommand;
+// #endregion exports

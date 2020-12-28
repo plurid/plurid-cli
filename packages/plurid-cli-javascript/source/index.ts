@@ -61,15 +61,15 @@ async function main(
         });
 
     program.addCommand(
-        makeApplicationCommand(program)
+        makeApplicationCommand(program),
     );
 
     program.addCommand(
-        makeCloudCommand(program)
+        makeCloudCommand(program),
     );
 
     program.addCommand(
-        makeProductsCommand(program)
+        makeProductsCommand(program),
     );
 
     program.parseAsync(process.argv);
