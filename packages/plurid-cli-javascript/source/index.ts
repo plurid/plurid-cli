@@ -15,6 +15,8 @@
 
     import {
         makeApplicationCommand,
+        makeCloudCommand,
+        makeProductsCommand,
     } from './makers';
     // #endregion external
 // #endregion imports
@@ -60,6 +62,14 @@ async function main(
 
     program.addCommand(
         makeApplicationCommand(program)
+    );
+
+    program.addCommand(
+        makeCloudCommand(program)
+    );
+
+    program.addCommand(
+        makeProductsCommand(program)
     );
 
     program.parseAsync(process.argv);
