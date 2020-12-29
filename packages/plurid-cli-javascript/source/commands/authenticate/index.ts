@@ -37,10 +37,10 @@ const fiveMinutes = 1000 * 60 * 5;
 
 
 const authenticateCommand = async () => {
-    const user = store.get('user');
+    const owner = store.get('owner');
 
-    if (user) {
-        console.log(`\n\tLogged in as ${user.username}. Run the 'logout' command to log out and be able to change users:`);
+    if (owner) {
+        console.log(`\n\tLogged in as ${owner.identonym}. Run the 'logout' command to log out and be able to change users:`);
         console.log('\n\t\tplurid logout\n');
         return;
     }
@@ -86,20 +86,20 @@ const authenticateCommand = async () => {
             } = response;
 
             const {
-                user,
+                owner,
                 token,
                 refreshToken,
             } = data;
 
             const {
-                username,
-            } = user;
+                identonym,
+            } = owner;
 
-            store.set('user', user);
+            store.set('owner', owner);
             store.set('token', token);
             store.set('refreshToken', refreshToken);
 
-            console.log(`\n\tSuccessfully logged in as ${username}.\n`);
+            console.log(`\n\tSuccessfully logged in as ${identonym}.\n`);
             return;
         }
 

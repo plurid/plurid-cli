@@ -10,6 +10,10 @@
 
     // #region external
     import {
+        AuthorizationTokens,
+    } from '#data/interfaces';
+
+    import {
         PLURID_API_URL_GRPAHQL,
     } from '#data/constants';
     // #endregion external
@@ -19,7 +23,7 @@
 
 // #region module
 export const authenticationClient = (
-    data: any,
+    data: AuthorizationTokens,
 ) => new ApolloClient({
     link: createHttpLink({
         uri: PLURID_API_URL_GRPAHQL,
