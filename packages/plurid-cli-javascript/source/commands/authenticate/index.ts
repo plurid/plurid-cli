@@ -24,13 +24,25 @@
 
 // #region module
 const app = express();
-app.use(express.static('server'));
+app.use(
+    express.static(
+        path.join(
+            __dirname,
+            './server',
+        ),
+    ),
+);
 app.get('/access/:accessCode', (req, res) => {
     const accessCode = req.params.accessCode || '';
     store.set('accessCode', accessCode);
     console.log(`\n\tLogging in with access code: ${accessCode}`);
 
-    res.sendFile(path.join(__dirname, './server/access.html'));
+    res.sendFile(
+        path.join(
+            __dirname,
+            './server/access.html',
+        ),
+    );
 });
 
 const fiveMinutes = 1000 * 60 * 5;
