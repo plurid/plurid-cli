@@ -1,5 +1,5 @@
 // #region module
-const MODE_ENV = process.env.MODE_ENV || '';
+const ENV_MODE = process.env.ENV_MODE || '';
 
 const environments: any = {
     production: 'production',
@@ -9,10 +9,10 @@ const environments: any = {
 };
 
 const environment = {
-    production: environments[MODE_ENV] === 'production',
-    development: environments[MODE_ENV] === 'development',
-    local: environments[MODE_ENV] === 'local',
-    localExternal: environments[MODE_ENV] === 'localexternal',
+    production: environments[ENV_MODE] === 'production',
+    development: environments[ENV_MODE] === 'development',
+    local: environments[ENV_MODE] === 'local',
+    localExternal: environments[ENV_MODE] === 'localexternal',
 };
 // #endregion module
 

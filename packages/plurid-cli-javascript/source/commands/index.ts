@@ -1,8 +1,8 @@
 // #region imports
     // #region internal
     import authenticateCommand from './authenticate';
-    import generateCommand from './generate';
-    import deployCommand from './deploy';
+    import generateCommand from './application/generate';
+    import deployCommand from './application/deploy';
     import statusCommand from './status';
     import logoutCommand from './logout';
     // #endregion internal

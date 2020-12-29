@@ -60,6 +60,7 @@ async function main(
             await logoutCommand();
         });
 
+
     program.addCommand(
         makeApplicationCommand(program),
     );
@@ -71,6 +72,7 @@ async function main(
     program.addCommand(
         makeProductsCommand(program),
     );
+
 
     program.parseAsync(process.argv);
 }

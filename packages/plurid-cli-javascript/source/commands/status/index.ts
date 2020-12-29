@@ -1,6 +1,6 @@
 // #region imports
     // #region external
-    import store from '../services/store';
+    import store from '#services/store';
     // #endregion external
 // #endregion imports
 

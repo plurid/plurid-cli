@@ -10,6 +10,12 @@
     // import {
     // } from '../../commands';
     // #endregion external
+
+
+    // #region internal
+    import makeHypodCommand from './hypod';
+    import makePerformerCommand from './performer';
+    // #endregion internal
 // #endregion imports
 
 
@@ -24,6 +30,15 @@ const makeCloudCommand = (
         .storeOptionsAsProperties(false)
         .passCommandToAction(false)
         .description('operate services on the plurid cloud');
+
+
+    cloud.addCommand(
+        makeHypodCommand(program),
+    );
+
+    cloud.addCommand(
+        makePerformerCommand(program),
+    );
 
 
     return cloud;

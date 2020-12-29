@@ -1,16 +1,26 @@
-import { ApolloClient } from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+// #region imports
+    // #region libraries
+    import { ApolloClient } from 'apollo-client';
+    import { createHttpLink } from 'apollo-link-http';
+    import { InMemoryCache } from 'apollo-cache-inmemory';
 
-import fetch from 'cross-fetch';
-
-import {
-    PLURID_API_URL_GRPAHQL,
-} from '../../../data/constants';
-
+    import fetch from 'cross-fetch';
+    // #endregion libraries
 
 
-export const authenticationClient = (data: any) => new ApolloClient({
+    // #region external
+    import {
+        PLURID_API_URL_GRPAHQL,
+    } from '#data/constants';
+    // #endregion external
+// #endregion imports
+
+
+
+// #region module
+export const authenticationClient = (
+    data: any,
+) => new ApolloClient({
     link: createHttpLink({
         uri: PLURID_API_URL_GRPAHQL,
         credentials: 'include',
@@ -32,6 +42,10 @@ const client = new ApolloClient({
     }),
     cache: new InMemoryCache(),
 });
+// #endregion module
 
 
+
+// #region exports
 export default client;
+// #endregion exports

@@ -16,22 +16,22 @@
     import {
         UPLOAD_HOSTNAME,
         UPLOAD_PORT,
-    } from '../data/constants';
+    } from '#data/constants';
 
-    import store from '../services/store';
+    import store from '#services/store';
 
-    import environment from '../services/utilities/environment';
+    import environment from '#services/utilities/environment';
 
     import {
         userLoggedIn,
-    } from '../services/utilities/user';
+    } from '#services/utilities/user';
 
     import {
         authenticationClient,
-    } from '../services/graphql/client';
+    } from '#services/graphql/client';
     import {
         APP_CHECK_AVAILABLE_APP_NAME,
-    } from '../services/graphql/query';
+    } from '#services/graphql/query';
     // #endregion external
 // #endregion imports
 

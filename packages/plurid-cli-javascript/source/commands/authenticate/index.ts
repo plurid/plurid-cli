@@ -11,12 +11,12 @@
 
 
     // #region external
-    import store from '../services/store';
+    import store from '#services/store';
 
-    import client from '../services/graphql/client';
+    import client from '#services/graphql/client';
     import {
         GET_ACCESS_CODE_TOKENS,
-    } from '../services/graphql/query';
+    } from '#services/graphql/query';
     // #endregion external
 // #endregion imports
 
