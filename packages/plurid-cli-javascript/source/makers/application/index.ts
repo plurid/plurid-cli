@@ -25,6 +25,7 @@ const makeApplicationCommand = (
     application
         .storeOptionsAsProperties(false)
         .passCommandToAction(false)
+        .alias('app')
         .description('generate, deploy, and manage plurid applications');
 
     application
