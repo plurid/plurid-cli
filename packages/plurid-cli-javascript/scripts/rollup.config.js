@@ -55,7 +55,7 @@ export default {
         sourceMaps(),
         copy({
             targets: [
-                { src: 'source/files/', dest: 'distribution/' },
+                { src: 'source/server/', dest: 'distribution/' },
             ],
         }),
     ],
