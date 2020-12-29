@@ -8,19 +8,19 @@
 
 // #region module
 const logoutCommand = async () => {
-    const user = store.get('user');
+    const owner = store.get('owner');
 
-    if (!user) {
-        console.log(`\n\tNo user logged in. Run the 'authenticate' command:`);
+    if (!owner) {
+        console.log(`\n\tNo owner logged in. Run the 'authenticate' command:`);
         console.log('\n\t\tplurid authenticate\n');
         return;
     }
 
-    store.delete('user');
+    store.delete('owner');
     store.delete('token');
     store.delete('refreshToken');
 
-    console.log(`\n\tLogged out from user ${user.username}.\n`);
+    console.log(`\n\tLogged out from owner ${owner.identonym}.\n`);
 }
 // #endregion module
 

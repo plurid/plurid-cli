@@ -8,15 +8,15 @@
 
 // #region module
 const statusCommand = async () => {
-    const user = store.get('user');
+    const owner = store.get('owner');
 
-    if (!user) {
-        console.log('\n\tUser not authenticated. Run the \'authenticate\' command:');
+    if (!owner) {
+        console.log('\n\tOwner not authenticated. Run the \'authenticate\' command:');
         console.log('\n\t\tplurid authenticate\n');
         return;
     }
 
-    console.log(`\n\tLogged in as ${user.username}.\n`);
+    console.log(`\n\tLogged in as ${owner.identonym}.\n`);
 }
 // #endregion module
 

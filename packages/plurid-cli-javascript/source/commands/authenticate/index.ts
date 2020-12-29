@@ -52,7 +52,7 @@ const authenticateCommand = async () => {
     const owner = store.get('owner');
 
     if (owner) {
-        console.log(`\n\tLogged in as ${owner.identonym}. Run the 'logout' command to log out and be able to change users:`);
+        console.log(`\n\tLogged in as ${owner.identonym}. Run the 'logout' command to log out and be able to change owners:`);
         console.log('\n\t\tplurid logout\n');
         return;
     }
