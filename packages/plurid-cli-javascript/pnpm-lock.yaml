@@ -47,6 +47,7 @@ specifiers:
   shelljs: ^0.8.5
   ts-jest: ^28.0.8
   ts-node: ^10.9.1
+  tslib: ^2.4.0
   typedoc: ^0.23.10
   typescript: ^4.7.4
 
@@ -99,6 +100,7 @@ devDependencies:
   shelljs: 0.8.5
   ts-jest: 28.0.8_m5noci3hdgjcbp5i3skppiufvq
   ts-node: 10.9.1_z5yog5l5yqinvqran22gqy2vdi
+  tslib: 2.4.0
   typedoc: 0.23.10_typescript@4.7.4
   typescript: 4.7.4
 
