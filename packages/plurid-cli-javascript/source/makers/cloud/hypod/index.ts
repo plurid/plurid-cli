@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
     import {
-        CommanderStatic,
+        Command,
     } from 'commander';
     // #endregion libraries
 
@@ -14,13 +14,12 @@
 
 // #region module
 const makeHypodCommand = (
-    program: CommanderStatic,
+    program: Command,
 ) => {
-    const hypod = new program.Command('hypod');
+    const hypod = program.createCommand('hypod');
 
     hypod
         .storeOptionsAsProperties(false)
-        .passCommandToAction(false)
         .description('operate services on the plurid hypod');
 
 

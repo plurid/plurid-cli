@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
     import {
-        CommanderStatic,
+        Command,
     } from 'commander';
     // #endregion libraries
 
@@ -22,13 +22,12 @@
 
 // #region module
 const makeCloudCommand = (
-    program: CommanderStatic,
+    program: Command,
 ) => {
-    const cloud = new program.Command('cloud');
+    const cloud = program.createCommand('cloud');
 
     cloud
         .storeOptionsAsProperties(false)
-        .passCommandToAction(false)
         .description('operate services on the plurid cloud');
 
 

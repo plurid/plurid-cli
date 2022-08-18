@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
     import {
-        CommanderStatic,
+        Command,
     } from 'commander';
     // #endregion libraries
 
@@ -21,13 +21,12 @@
 
 // #region module
 const makeProductsCommand = (
-    program: CommanderStatic,
+    program: Command,
 ) => {
-    const products = new program.Command('products');
+    const products = program.createCommand('products');
 
     products
         .storeOptionsAsProperties(false)
-        .passCommandToAction(false)
         .description('operate products on the plurid machine');
 
 

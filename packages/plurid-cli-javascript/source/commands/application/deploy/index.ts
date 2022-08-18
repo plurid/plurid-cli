@@ -56,7 +56,7 @@ const parseAppConfigurationFile = (
     try {
         const pluridFile = path.join(directory, './plurid.app.yaml');
         const contents = fs.readFileSync(pluridFile, 'utf8');
-        const data = yaml.safeLoad(contents);
+        const data = yaml.load(contents);
         return data;
     } catch (error) {
         return {};

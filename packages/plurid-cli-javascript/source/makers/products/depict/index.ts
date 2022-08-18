@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
     import {
-        CommanderStatic,
+        Command,
     } from 'commander';
     // #endregion libraries
 
@@ -14,13 +14,12 @@
 
 // #region module
 const makeDepictCommand = (
-    program: CommanderStatic,
+    program: Command,
 ) => {
-    const depict = new program.Command('depict');
+    const depict = program.createCommand('depict');
 
     depict
         .storeOptionsAsProperties(false)
-        .passCommandToAction(false)
         .description('operate services on the plurid depict');
 
 

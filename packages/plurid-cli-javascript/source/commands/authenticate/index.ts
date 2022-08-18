@@ -58,7 +58,7 @@ const authenticateCommand = async () => {
     }
 
     const port = await getPort({
-        port: getPort.makeRange(33800, 33900),
+        port: 33800, // 33900
     });
     const server = app.listen(port);
 

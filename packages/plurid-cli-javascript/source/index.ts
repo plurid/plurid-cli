@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
-    import program, {
-        CommanderStatic,
+    import {
+        program,
     } from 'commander';
     // #endregion libraries
 
@@ -24,12 +24,9 @@
 
 
 // #region module
-async function main(
-    program: CommanderStatic,
-) {
+async function main() {
     program
-        .storeOptionsAsProperties(false)
-        .passCommandToAction(false);
+        .storeOptionsAsProperties(false);
 
     program
         .name('plurid')
@@ -78,5 +75,5 @@ async function main(
 }
 
 
-main(program);
+main();
 // #endregion module

@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
     import {
-        CommanderStatic,
+        Command,
     } from 'commander';
     // #endregion libraries
 
@@ -14,13 +14,12 @@
 
 // #region module
 const makePerformerCommand = (
-    program: CommanderStatic,
+    program: Command,
 ) => {
-    const performer = new program.Command('performer');
+    const performer = program.createCommand('performer');
 
     performer
         .storeOptionsAsProperties(false)
-        .passCommandToAction(false)
         .description('operate services on the plurid performer');
 
 

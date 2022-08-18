@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
     import {
-        CommanderStatic,
+        Command
     } from 'commander';
     // #endregion libraries
 
@@ -18,13 +18,12 @@
 
 // #region module
 const makeApplicationCommand = (
-    program: CommanderStatic,
+    program: Command,
 ) => {
-    const application = new program.Command('application');
+    const application = program.createCommand('application');
 
     application
         .storeOptionsAsProperties(false)
-        .passCommandToAction(false)
         .alias('app')
         .description('generate, deploy, and manage plurid applications');
 
