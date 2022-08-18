@@ -41,12 +41,12 @@
         "copy.server": "cp -r ./source/server ./distribution/server/",
         "test": "jest ./source --config ./configurations/jest.config.js --rootDir ./",
         "lint": "eslint -c ./configurations/.eslintrc.js ./source --ext .ts,.tsx",
-        "start": "yarn clean && rollup -c ./scripts/rollup.config.js -w --environment ENV_MODE:local",
+        "start": "pnpm clean && rollup -c ./scripts/rollup.config.js -w --environment ENV_MODE:local",
         "build.clean": "rm -rf `find ./distribution/ -type d -name __tests__`",
-        "build.development": "yarn clean && rollup -c ./scripts/rollup.config.js --environment ENV_MODE:development",
-        "build.production": "yarn clean && rollup -c ./scripts/rollup.config.js --environment ENV_MODE:production",
-        "build": "yarn clean && yarn lint && yarn test && yarn build.production && yarn build.clean",
-        "prepublishOnly": "yarn build"
+        "build.development": "pnpm clean && rollup -c ./scripts/rollup.config.js --environment ENV_MODE:development",
+        "build.production": "pnpm clean && rollup -c ./scripts/rollup.config.js --environment ENV_MODE:production",
+        "build": "pnpm clean && pnpm lint && pnpm test && pnpm build.production && pnpm build.clean",
+        "prepublishOnly": "pnpm build"
     },
     "dependencies": {
         "adm-zip": "^0.5.9",
