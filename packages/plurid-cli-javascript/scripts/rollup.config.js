@@ -36,6 +36,8 @@ export default {
         'child_process',
         'path',
         'fs',
+        '@apollo/client',
+        '@apollo/client/core',
     ],
     plugins: [
         replace({
