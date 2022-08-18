@@ -6,7 +6,9 @@
 
     import open from 'open';
 
-    import getPort from 'get-port';
+    import getPort, {
+        portNumbers,
+    } from 'get-port';
     // #endregion libraries
 
 
@@ -58,7 +60,7 @@ const authenticateCommand = async () => {
     }
 
     const port = await getPort({
-        port: 33800, // 33900
+        port: portNumbers(33800, 33900),
     });
     const server = app.listen(port);
 
